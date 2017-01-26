@@ -1,6 +1,87 @@
-@import '../node_modules/normalize.css/normalize';
+
 
 
 body {
-  background-color: lightgrey;
+  margin: 0;
+  min-width: 250px;
+  /*background-color: lightgrey;*/
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: lightgrey;
+  padding: 10px 30px;
+  color: white;
+  text-align: center;
+}
+
+.header {
+  content: "";
+  display: flex;
+  clear: both;
+}
+
+
+#myWorkList {
+  padding: 10px 10px 30px 2px;
+}
+
+
+#custom-search-form {
+  margin: 0;
+  margin-top: 5px;
+  padding:0;
+}
+
+#custom-search-form .search-query {
+  padding-right: 3px;
+
+  padding-left: 0px;
+
+}
+
+.search-query {
+  z-index: 2;
+}
+.search-query {
+  width:250px;
+  height: 30px;
+  font-size: large;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+.fa-tag {
+  float: right;
+}
+
+.fa-search {
+  padding: 10px;
+  float: right;
+}
+
+.fa-angle-down {
+  color: red;
+}
+
+
+  ul li {
+    list-style-type: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 3px;
+    background-color: #eeeeee;
+
+  }
+
+
+
+
+
