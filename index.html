@@ -5,24 +5,25 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="script.js"></script>
     <title>Richi's Todo App</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="https://use.fontawesome.com/2a4a4932a3.js"></script>
+
 </head>
 <body>
 
 <div id="myDiv" class="header">
     <div class="span">
-        <form id="custom-search-form" class="form-search form-horizontal pull-right">
             <div class="input-append span">
                 <input type="text" class="search-query myInput" placeholder="Enter...">
                 <i class="fa fa-search" aria-hidden="true"></i>
-            </div>
+                <button id="plusbutton">ok</button></div>
             <div class="angle-down">
                 <i class="fa fa-angle-down" aria-hidden="true"></i>
             </div>
-        </form>
     </div>
 
 
@@ -31,9 +32,7 @@
 
         <div class="list">
             <ul class="list-items">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                <i class="fa fa-tag" aria-hidden="true"></i>
-                <li>Aufgabe1</li>
+
             </ul>
             <ul class="list-items">
                 <i class="fa fa-tag" aria-hidden="true"></i>
@@ -46,6 +45,12 @@
                 <li>Aufgabe3</li>
             </ul>
         </div>
+        <div class="erledigt">
+            <ul class="fertig">
+                <li>Erledigt</li>
+            </ul>
+        </div>
+
 <a href="index_2.html">Liste</a>
 
 </body>

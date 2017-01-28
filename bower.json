@@ -1,0 +1,21 @@
+{
+  "name": "RichisApp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "rs"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/rischaelin/Richi-sTodoApp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.1.1"
+  }
+}
