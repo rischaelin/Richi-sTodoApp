@@ -6,7 +6,8 @@ $().ready(function () {
     var $plusButton = $("#plusbutton");
     var $input = $("input");
     var $liste = $('ul:first');
-    var $closeButton = $('<div>x</div>')
+    var $closeButton = $("#erbutton")
+
 
 
     // bei click auf plusbutton....
@@ -27,22 +28,41 @@ $().ready(function () {
             $liste.append($listItem);
 
             // bei li erstellten tag x hingzufügen (append)
-            $listItem.append($closeButton)
+            $listItem.append($closeButton);
 
             // textfeld leeren
             $input.val('');
         }
 
+
+        var $erliste = $('ul:first');
         // bei click auf icon....
+
         $closeButton.on('click',function () {
 
 
 
-            // ...wird meine Aufgabe in die Erledigte-liste veschoben
+            // wird der Inhalt von listItem (wert)
+            var erledigt = $listItem.val();
 
-        $listItem.append();
 
-        })
+            //nur wenn Inhalt existiert
+            if (erledigt !== '') {
+
+
+                // ...wird meine Aufgabe in die Erledigte-liste veschoben, in ein li-tag
+                var $listErledigt =$('<li></li>');
+                $listErledigt.html(erledigt);
+
+                // ... mit einem ul unen anfügen
+                $listItem.append($erliste);
+            }
+
+
+
+
+
+        });
 
     });
 
