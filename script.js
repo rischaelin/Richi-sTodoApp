@@ -5,68 +5,73 @@ $().ready(function () {
     // meine Elemente
     var $plusButton = $("#plusbutton");
     var $input = $("input");
-    var $liste = $('ul:first');
-    var $closeButton = $("#erbutton")
+    var $listeOffen = $('.offen');
+    var $listeFertig = $('.fertig');
 
 
 
-    // bei click auf plusbutton....
-    $plusButton.on('click', function () {
 
-        // wird mein Inhlat vom input (Wert)
-        var inputInhalt = $input.val();
-
-        //nur wenn Inhalt existiert
-        if (inputInhalt !== '') {
-
-            // in ein li-tag geschrieben
-            var $listItem = $('<li></li>');
-            $listItem.html(inputInhalt);
+    var taskliste =   [
+        {"erledigt": false, "caption": "Toast kaufen"},
+        {"erledigt": false, "caption": "Brot kaufen"},
+        {"erledigt": true, "caption": "Bier kaufen"},
+        {"erledigt": false, "caption": "Milch kaufen"},
+        {"erledigt": false, "caption": "Käse kaufen"}
+    ];
 
 
-            // und mit einem ul unten anfügen (append)
-            $liste.append($listItem);
-
-            // bei li erstellten tag x hingzufügen (append)
-            $listItem.append($closeButton);
-
-            // textfeld leeren
-            $input.val('');
+    taskliste.forEach(function(task){
+        var $listItem = buildTaskItem(task.caption);
+        if (!task.erledigt){
+            $listeOffen.append($listItem);
+        } else {
+            $listeFertig.append($listItem);
         }
+    });
 
+        // bei click auf plusbutton....
+        $plusButton.on('click', function () {
 
-        var $erliste = $('ul:first');
-        // bei click auf icon....
-
-        $closeButton.on('click',function () {
-
-
-
-            // wird der Inhalt von listItem (wert)
-            var erledigt = $listItem.val();
-
+            // wird mein Inhlat vom input (Wert)
+            var inputInhalt = $input.val();
 
             //nur wenn Inhalt existiert
-            if (erledigt !== '') {
+            if (inputInhalt !== '') {
 
+                // in ein li-tag geschrieben
+                var $listItem = buildTaskItem(inputInhalt);
 
-                // ...wird meine Aufgabe in die Erledigte-liste veschoben, in ein li-tag
-                var $listErledigt =$('<li></li>');
-                $listErledigt.html(erledigt);
+                // und mit einem ul unten anfügen (append)
+                $listeOffen.append($listItem);
 
-                // ... mit einem ul unen anfügen
-                $listItem.append($erliste);
+                // bei li erstellten tag x hingzufügen (append)
+                $listItem.append();
+
+                // textfeld leeren
+                $input.val('');
             }
-
-
-
-
 
         });
 
+    // von offenen Aufgabe in Erledigte - Liste verschieben
+
+
+
+    $listeOffen.on('click', '.task', function () {
+       // var $task = $(this);
+        $listeFertig.prepend(this);
+
+
     });
+
+
 
 });
 
-
+var buildTaskItem = function(caption) {
+    var $listItem = $('<li></li>');
+    $listItem.addClass('task');
+    $listItem.html(caption);
+    return $listItem;
+}
 
