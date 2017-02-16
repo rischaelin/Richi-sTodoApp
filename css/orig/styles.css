@@ -1,10 +1,11 @@
 body {
   margin: 0;
   min-width: 250px;
-  /*background-color: lightgrey;*/ }
-
-* {
+  /*background-color: lightgrey;*/
   box-sizing: border-box; }
+
+*, ::before, ::after {
+  box-sizing: inherit; }
 
 .header {
   background-color: lightgrey;
@@ -18,43 +19,31 @@ body {
   display: flex;
   clear: both; }
 
-#myWorkList {
-  padding: 10px 10px 30px 2px; }
-
-#custom-search-form {
-  margin: 0;
-  margin-top: 5px;
-  padding: 0; }
-
-#custom-search-form .search-query {
-  padding-right: 3px;
-  padding-left: 0px; }
-
-.search-query {
-  z-index: 2; }
-
-.search-query {
-  width: 250px;
-  height: 30px;
-  font-size: large; }
+input {
+  margin: 0 0 1em .2em;
+  padding: .2em .5em;
+  width: 100%;
+  line-height: 3;
+  font-size: 12px;
+  background-color: #fffbf0;
+  border: 1px solid #e7c157; }
 
 ul {
-  margin: 0;
-  padding: 0; }
+  margin: 0px;
+  padding: 0px; }
 
-.fa-tag {
-  float: right; }
+.list {
+  margin: 10px; }
 
-.fa-search {
-  padding: 10px;
-  float: right; }
-
-.fa-angle-down {
-  color: red; }
+.erledigt {
+  margin: 10px; }
 
 ul li {
+  border: 1px solid black;
+  border-radius: 5px;
   list-style-type: none;
   font-size: 20px;
   cursor: pointer;
   padding: 3px;
+  margin-bottom: 3px;
   background-color: #eeeeee; }

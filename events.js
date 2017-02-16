@@ -8,10 +8,35 @@ $().ready(function () {
     var $listeOffen = $('.offen');
     var $listeFertig = $('.fertig');
 
+    var newtaskliste = [
+        {"status": false, "titel": "Techfabrik-Schule", "id": "01"},
+        {"status": false, "titel": "Auto in Garage", "id": "02"},
+        {"status": false, "titel": "BM-Probe", "id": "03"},
+        {"status": true, "titel": "Skifahren", "id": "04"}
+    ];
+
+    newtaskliste.forEach(function (task) {
+        var $listItem = buildTaskItem(task.titel);
+        if (!task.status){
+            $listeOffen.append($listItem);
+        } else {
+            $listeFertig.append($listItem);
+        }
+    });
 
 
+    $plusButton.on('click', function () {
+        var inputInhalt = $input.val();
+        if  (inputInhalt !== ''){
+            var newliste = buildTaskItem(inputInhalt);
+            $listeOffen.append(newliste);
+            newliste.append();
+            $input.val('');
+        }
 
-    var taskliste =   [
+    })
+
+   /* var taskliste =   [
         {"erledigt": false, "caption": "Toast kaufen"},
         {"erledigt": false, "caption": "Brot kaufen"},
         {"erledigt": true, "caption": "Bier kaufen"},
@@ -27,8 +52,14 @@ $().ready(function () {
         } else {
             $listeFertig.append($listItem);
         }
-    });
 
+
+
+
+    }); */
+
+
+/*
         // bei click auf plusbutton....
         $plusButton.on('click', function () {
 
@@ -51,7 +82,7 @@ $().ready(function () {
                 $input.val('');
             }
 
-        });
+        });*/
 
     // von offenen Aufgabe in Erledigte - Liste verschieben
 
@@ -68,10 +99,13 @@ $().ready(function () {
 
 });
 
-var buildTaskItem = function(caption) {
+var buildTaskItem = function(titel) {
     var $listItem = $('<li></li>');
     $listItem.addClass('task');
-    $listItem.html(caption);
+    $listItem.html(titel);
     return $listItem;
+
 }
+
+
 
