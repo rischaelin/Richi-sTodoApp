@@ -1,0 +1,23 @@
+
+[
+
+{
+  "ID": 1,
+  "caption": "Hallo",
+  "Status": "false"
+},
+
+{
+  "ID": 2,
+  "caption": "Halle Welt",
+  "Status": "false"
+},
+
+
+{
+  "ID": 3,
+  "caption": "Tag",
+  "Status": "true"
+}
+
+]
