@@ -1,1 +1,52 @@
-body,ul{margin:0}body{min-width:250px;box-sizing:border-box}*,::after,::before{box-sizing:inherit}.header{background-color:#d3d3d3;padding:10px 30px;color:#fff;text-align:center;content:"";display:-ms-flexbox;display:flex;clear:both}input{margin:0 0 1em .2em;padding:.2em .5em;width:100%;line-height:3;font-size:12px;background-color:#fffbf0;border:1px solid #e7c157}ul{padding:0}.erledigt,.list{margin:10px}ul li{border:1px solid #000;border-radius:5px;list-style-type:none;font-size:20px;cursor:pointer;padding:3px;margin-bottom:3px;background-color:#eee}
+body, ul {
+    margin: 0
+}
+
+body {
+    min-width: 250px;
+    box-sizing: border-box
+}
+
+*, ::after, ::before {
+    box-sizing: inherit
+}
+
+.header {
+    background-color: #d3d3d3;
+    padding: 10px 30px;
+    color: #fff;
+    text-align: center;
+    content: "";
+    display: -ms-flexbox;
+    display: flex;
+    clear: both
+}
+
+input {
+    margin: 0 0 1em .2em;
+    padding: .2em .5em;
+    width: 100%;
+    line-height: 3;
+    font-size: 12px;
+    background-color: #fffbf0;
+    border: 1px solid #e7c157
+}
+
+ul {
+    padding: 0
+}
+
+.erledigt, .list {
+    margin: 10px
+}
+
+ul li {
+    border: 1px solid #000;
+    border-radius: 5px;
+    list-style-type: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 3px;
+    margin-bottom: 3px;
+    background-color: #eee
+}
