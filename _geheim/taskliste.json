@@ -1,21 +1,21 @@
 [
   {
     "status": false,
-    "caption": "Techfabrik-Schule",
+    "caption": "Wäsche waschen",
     "id": "01"
   },
   {
-    "status": false,
+    "status": true,
     "caption": "Auto in Garage",
     "id": "02"
   },
   {
-    "status": false,
+    "status": true,
     "caption": "BM-Probe",
     "id": "03"
   },
   {
-    "status": true,
+    "status": false,
     "caption": "Skifahren",
     "id": "04"
   }

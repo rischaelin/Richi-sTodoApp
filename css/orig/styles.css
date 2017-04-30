@@ -10,7 +10,7 @@ body {
 .header {
   background-color: lightgrey;
   padding: 10px 30px;
-  color: white;
+  color: blue;
   text-align: center; }
 
 .header {
@@ -23,7 +23,7 @@ input {
   margin: 0 0 1em .2em;
   padding: .2em .5em;
   width: 100%;
-  line-height: 3;
+  line-height: 12;
   font-size: 12px;
   background-color: #fffbf0;
   border: 1px solid #e7c157; }
@@ -33,16 +33,16 @@ ul {
   padding: 0px; }
 
 .list {
-  margin: 10px; }
+  margin: 30px; }
 
 .erledigt {
-  margin: 10px; }
+  margin: 30px; }
 
 ul li {
-  border: 1px solid black;
+  border: 1px solid greenyellow;
   border-radius: 5px;
   list-style-type: none;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
   padding: 3px;
   margin-bottom: 3px;

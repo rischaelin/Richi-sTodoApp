@@ -12,8 +12,8 @@ $().ready(function () {
 
 
     var tasklisteAufbauen = function (newtaskliste) {
-        newtaskliste.forEach(function (task) {
-            var $listItem = buildTaskItem(task.titel);
+         newtaskliste.forEach(function (task) {
+            var $listItem = buildTaskItem(task.caption);
             if (!task.status) {
                 $listeOffen.append($listItem);
             } else {
@@ -48,18 +48,21 @@ $().ready(function () {
 
     });
 
-    $.ajax({
-        url: "api/taskliste.json",
+  $.ajax({
+        url: "api/alle_tasks.php",
         dataType: "json"
     }).done(tasklisteAufbauen);
 
 
+
+
+
 });
 
-var buildTaskItem = function (titel) {
+var buildTaskItem = function (caption) {
     var $listItem = $('<li></li>');
     $listItem.addClass('task');
-    $listItem.html(titel);
+    $listItem.html(caption);
     return $listItem;
 
 }
